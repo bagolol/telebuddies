@@ -1,6 +1,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require('mongoose');
+var dbHelpers = require('./databaseHelpers.js');
+
 
 var Schema = new mongoose.Schema({
     name    : String,
@@ -22,10 +24,14 @@ app.use(bodyParser.json());
 app.use(express.static('public'))
 
 app.post('/add_contact', function (req, res) {
-    var contact = new Contact( req.body );
-    contact.save(function (err) {
-        res.json(200, contact);
-    });
+    if(dbHelpers.isEmailDuplicated(Contact, req.body.email)) {
+        res.json(200, {message: 'duplicated'})
+    } else {
+        var contact = new Contact( req.body );
+        contact.save(function (err) {
+            res.json(200, contact);
+        });
+    }
 })
 
 app.get('/', function(req, res) {
