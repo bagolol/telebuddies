@@ -8,17 +8,21 @@
     <meta name="description" content="telebuddies">
 
     <link rel="stylesheet" href="./style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   </head>
 
   <body>
-    <header>TELEBUDDIES</header>
-    <form action="add_contact" method="post" id="form" class="topBefore">
-      <input id="name" type="text" name="name" placeholder="NAME">
-      <input id="email" type="text" name="email" placeholder="E-MAIL">
-      <textarea id="message" type="text" name="message" placeholder="MESSAGE"></textarea>
-      <input id="submit" type="submit" value="Submit">
-
-    </form>
+    <div class="top-bar">
+      <h1>telebuddies</h1>
+    </div>
+    <article class="product-description">Telebuddies is the airbnb of the tv</article>
+    <div class="bottom-bar">
+      <h3>Want to know when telebuddies is ready?</h3>
+      <form action="add_contact" method="post" id="form" class="form-wrapper cf">        <input type="email" placeholder="Enter your email for early access" required>
+        <button type="submit" class="btn btn-primary">Sign up</button>
+      </form>
+    </div>
   </body>
 </html>
