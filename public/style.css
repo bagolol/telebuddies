@@ -92,8 +92,8 @@ header {
 
 #form {
   position: absolute;
-  top: 50%;
-  left: 35%;
+  top: 40%;
+  left:35%;
   width: 400px;
 }
 
@@ -139,19 +139,44 @@ textarea {
   font-size: large;
 }
 .top-bar {
-  height: 70px;
+  height: 80px;
+  margin-bottom: solid 1px #eaaf12
   margin: -10px;
   overflow: hidden;
-  background: #5d97fb;
-  color: #ffffff;
+  background: url(./nav-main-pattern.png) #ffba00;
   text-align: center;
 }
 
 .top-bar h1 {
-  padding-top: 14px;
-  margin:auto;
-  line-height:51px;
+  float: left;
+  margin-left: 20px;
+  text-decoration: none;
   vertical-align:middle;
+}
+.top-bar h1 a {
+  text-decoration: inherit;
+  color: #ffffff;
+}
+.right-navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  margin-top: 15px;
+  margin-right: 50px;
+  float: right;
+}
+.right-navigation li {
+  font-size: 22px;
+  float: left;
+}
+.right-navigation li a {
+  display: block;
+  text-align: center;
+  width: 60px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .bottom-bar {
@@ -164,7 +189,7 @@ textarea {
 }
 .bottom-bar h3 {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 textarea:hover {
@@ -246,7 +271,7 @@ textarea:hover {
 
 .form-wrapper button:active,
 .form-wrapper button:focus{
-  background: #c42f2f;
+  background: #5286e3;
   outline: 0;
 }
 
@@ -284,4 +309,16 @@ textarea:hover {
 
 #submit:hover {
   color: #ffffff;
+}
+
+ /* alert styling */
+.email-input-outcome {
+  margin: auto;
+  width: 393px;
+}
+.email-input-error {
+  color: red;
+}
+.email-input-success {
+  color: green;
 }

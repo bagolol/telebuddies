@@ -1,45 +1,50 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require('mongoose');
-var dbHelpers = require('./databaseHelpers.js');
+var path = require('path');
 
 
+// *** Database setup ***
 var Schema = new mongoose.Schema({
-    name    : String,
     email   : String,
-    message : String
 });
-
-var Contact = mongoose.model('Contact', Schema);
-
-mongoose.connect(process.env.MONGODB_URI, function (error) {
+var url = process.env.DEV ? 'mongodb://localhost/telebuddies' : process.env.MONGODB_URI;
+mongoose.connect(url, function (error) {
     if (error) console.error(error);
     else console.log('mongo connected');
 });
+var Contact = mongoose.model('Contact', Schema);
 
+// *** Express setup ***
 var app = express();
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static('public'))
+app.set('view engine', 'pug');
+app.use(express.static(path.join(__dirname, './public')));
 
+// *** Routes ***
 app.post('/add_contact', function (req, res) {
-    if(dbHelpers.isEmailDuplicated(Contact, req.body.email)) {
-        res.json(200, {message: 'duplicated'})
-    } else {
-        var contact = new Contact( req.body );
-        contact.save(function (err) {
-            res.json(200, contact);
-        });
-    }
-})
+    Contact.count({email: req.body.email}, function(err, c) {
+        if (err) {
+            res.render('index', {error: true})
+        }
+        else if (c > 0) {
+            res.render('index', {duplicated: true});
+        } else {
+            var contact = new Contact( req.body );
+            contact.save(function (err) {
+                res.render('index', {success: true});
+            });
+        }
+    });
+});
 
 app.get('/', function(req, res) {
-  res.sendfile(__dirname + '/index.html');
+  res.render('index');
 });
 
 
-// Initialize the app.
+// *** Initialize the app. ***
 var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
     console.log("App now running on port", port);

@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>telebuddies</title>
+    <meta name="description" content="telebuddies">
+
+    link(rel='stylesheet', href='/style.css')
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+    <nav class="top-bar">
+      h1: a(href='/') telebuddies
+      ul.right-navigation
+        li: a(href='/faq') faq
+        li: a(href='/contact') contact
+    </nav>
+    <section>
+    <article class="product-description">telebuddies is the airbnb of the tv</article>
+    </section>
+    div.bottom-bar
+      h3 Want to know when telebuddies is ready?
+      div.email-input-outcome
+        if success
+          p.email-input-success your email was successfully saved
+        else if duplicated
+          p.email-input-error your email already exists
+        else if error
+          p.email-input-error an error occured: your email wasn't saved! a(href='/') please retry
+      <form action="add_contact" method="post" id="form" class="form-wrapper cf">
+        <input type="email" name="email" placeholder="Enter your email for early access" required>
+        <button type="submit" class="btn btn-primary">Sign up</button>
+      </form>
+  </body>
+</html>
