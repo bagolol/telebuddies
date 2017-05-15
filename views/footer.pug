@@ -1,0 +1,11 @@
+div.bottom-bar
+ h3 Want to know when telebuddies is ready?
+  div.email-input-outcome
+    if duplicated
+      p.email-input-error your email already exists
+    else if error
+      p.email-input-error an error occured: your email wasn't saved! a(href='/') please retry
+  form#form(action='add_contact' method='post' class='form-wrapper cf')
+    input(type='email' name='email' placeholder='Enter your email for early access' required)
+    button(type='submit' class='btn btn-primary') Sign up
+

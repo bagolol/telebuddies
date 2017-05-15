@@ -322,3 +322,9 @@ textarea:hover {
 .email-input-success {
   color: green;
 }
+
+.faq, .about, .success {
+  text-align: center;
+  color: #8c8c8c;
+}
+

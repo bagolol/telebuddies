@@ -23,6 +23,18 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, './public')));
 
 // *** Routes ***
+app.get('/', function(req, res) {
+  res.render('index');
+});
+
+app.get('/about', function(req, res) {
+  res.render('index', {about: true});
+});
+
+app.get('/faq', function(req, res) {
+  res.render('index', {faq: true});
+});
+
 app.post('/add_contact', function (req, res) {
     Contact.count({email: req.body.email}, function(err, c) {
         if (err) {
@@ -39,9 +51,6 @@ app.post('/add_contact', function (req, res) {
     });
 });
 
-app.get('/', function(req, res) {
-  res.render('index');
-});
 
 
 // *** Initialize the app. ***
