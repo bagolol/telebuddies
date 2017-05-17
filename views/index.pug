@@ -11,14 +11,15 @@ html
 
 
   body
+    div.top-bar
     include nav.pug
-    section
-      if about
-        include about.pug
-      else if faq
+    div.text-container
+    if about
+       include about.pug
+    else if faq
         include faq.pug
-      else if success
+    else if success
         include success.pug
-      else
-        article.product-description telebuddies is the airbnb of the tv
+    else
+        div.product-description telebuddies is the airbnb of the tv
         include footer.pug

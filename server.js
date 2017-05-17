@@ -3,7 +3,6 @@ var bodyParser = require("body-parser");
 var mongoose = require('mongoose');
 var path = require('path');
 
-
 // *** Database setup ***
 var Schema = new mongoose.Schema({
     email   : String,
@@ -21,7 +20,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, './public')));
-
 // *** Routes ***
 app.get('/', function(req, res) {
   res.render('index');
