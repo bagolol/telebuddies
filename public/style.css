@@ -1,140 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
-  color: #bbb5af;
-}
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
-  color: #bbb5af;
-}
-
-input::placeholder, textarea::placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input:focus::placeholder, textarea::focus:placeholder {
-    z-index: 3;
-    border-color: #5e97fc;
-    outline: 0;
-}
-
-input::-ms-placeholder, textarea::-ms-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
-  color: #bbb5af;
-}
-
-/* on hover placeholder */
-
-input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
-  color: #ffffff;
-  font-size: 0.875em;
-}
-
-input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
-  color: #cbc6c1;
-}
-
-input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
-  color: #ffffff;
-  font-size: 0.875em;
-}
-
-input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
-  color: #cbc6c1;
-}
-
-input:hover::placeholder, textarea:hover::placeholder {
-  color: #ffffff;
-
-  font-size: 0.875em;
-}
-
-input:hover:focus::placeholder, textarea:hover:focus::placeholder {
-  color: #cbc6c1;
-}
-
-input:hover::placeholder, textarea:hover::placeholder {
-  color: #ffffff;
-  font-size: 0.875em;
-}
-
-input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
-    z-index: 3;
-    border-color: #5e97fc;
-    outline: 0;
-}
-
 body {
+  height:100%;
+  width:100%;  
+  margin: 0;
 }
-
-header {
-  position: relative;
-  margin: 100px 0 25px 0;
-  font-size: 2.3em;
-  text-align: center;
-  letter-spacing: 7px;
-}
-
-#form {
-  position: absolute;
-  top: 40%;
-  left:35%;
-  width: 400px;
-}
-
-input {
-  font-size: 13px;
-  width: 470px;
-  height: 50px;
-  padding: 0px 15px 0px 15px;
-
-  background: transparent;
-  outline: none;
-  color: #726659;
-
-  border: solid 1px #fffff;
-  border-bottom: none;
-
-}
-
-input:hover {
-  background: #ffffff
-  color: #ffffff;
-}
-
-textarea {
-  width: 470px;
-  max-width: 470px;
-  height: 110px;
-  max-height: 110px;
-  padding: 15px;
-  background: transparent;
-  outline: none;
-  color: #726659;
-  font-size: 13px;
-
-  border: solid 1px #ffffff;
-
+.partial-container {
+  height: 100%;
+  font-family: 'roboto mono', monospace;
+  /* background: linear-gradient(to bottom, rgb(255, 196, 0), rgb(255, 126, 171)); */
+  background: #ffc400;
 }
 .product-description {
-  margin-top: 50px;
+  height: 100vh;
+  padding-top: 90px;
+  font-family: 'roboto mono', monospace;
   text-align: center;
-  color: #8C8C8C;
   line-height: 2px;
   font-size: large;
 }
@@ -143,12 +24,15 @@ textarea {
   margin-bottom: solid 1px #eaaf12
   margin: -10px;
   overflow: hidden;
-  background: #C2185B;
+  background: #c2185b;
   text-align: center;
 }
 .navbar-logo {
-  height: 70px;
-  margin-bottom: solid 1px #eaaf12
+  position: relative;
+  z-index: 0;
+  font-family: 'roboto mono', monospace;
+  height: 100px;
+  /* box-shadow: 0px 1px 8px #b0003a; */
   margin: -10px;
   overflow: hidden;
   background: #e91e63;
@@ -156,10 +40,11 @@ textarea {
 }
 
 .navbar-logo h1 {
+  position: relative;
   float: left;
   margin-left: 20px;
   text-decoration: none;
-  vertical-align:middle;
+  vertical-align: middle;
 }
 .navbar-logo h1 a {
   text-decoration: inherit;
@@ -187,172 +72,53 @@ textarea {
   color: #ffffff;
 }
 
-.bottom-bar {
-  position: absolute;
-  bottom: 0;
+.email-form {
+  position: relative;
+  margin-top: 200px;
   width: 100%;
-  height: 180px;
-  background: #202b40;
-  color: #ffffff;
 }
-.bottom-bar h3 {
-  text-align: center;
-  margin-top: 2%;
+
+::-webkit-input-placeholder {
+  color: inherit;
+  font-family: 'roboto mono', monospace;
+  font-size: 14px;
+}
+:-moz-placeholder { /* older Firefox*/
+  color: inherit;
+  font-family: 'roboto mono', monospace;
+  font-size:14px;
+}
+::-moz-placeholder { /* Firefox 19+ */ 
+  color: inherit;
+  font-family: 'roboto mono', monospace;
+  font-size: 14px;
+} 
+:-ms-input-placeholder { 
+  color: inherit;
+  font-family: 'roboto mono', monospace;
+  font-size: 14px; 
 }
 
 textarea:hover {
-  background: #ffffff
-  color: #ffffff;
+  background
+  color: inherit;
 }
 
-/*Clearing Floats*/
-.cf:before, .cf:after{
-  content:"";
-  display:table;
-}
-
-.cf:after{
-  clear:both;
-}
-
-.cf{
-  zoom:1;
-}
-/* Form wrapper styling */
-.form-wrapper {
-}
-
-/* Form text input */
-.form-wrapper input {
-  font-size: large;
-  color: #555;
-  width: 300px;
-  height: 40px;
-  padding: 10px 5px;
-  float: left;
-  border: 1px solid grey;
-  background: #ffffff;
-  border-radius: 3px 0 0 3px;
-}
-
-.form-wrapper input:focus {
-    z-index: 3;
-    border-color: #5e97fc;
-    outline: 0;
-}
-
-.form-wrapper input::-webkit-input-placeholder {
-  color: #999;
-  font-weight: normal;
-}
-
-.form-wrapper input:-moz-placeholder {
-  color: #999;
-  font-weight: normal;
-}
-
-.form-wrapper input:-ms-input-placeholder {
-  color: #999;
-  font-weight: normal;
-}
-
-/* Form submit button */
-.form-wrapper button {
-  overflow: visible;
-  position: relative;
-  float: right;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  height: 40px;
-  width: 100px;
-  font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
-  color: #fff;
-  text-transform: uppercase;
-  border-radius: 0 3px 3px 0;
-  text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
-}
-
-.form-wrapper button:hover{
-  background: #5286E3;
-}
-
-.form-wrapper button:active,
-.form-wrapper button:focus{
-  background: #5286e3;
-  outline: 0;
-}
-
-
-.form-wrapper button:hover:before{
-  border-right-color: #e54040;
-}
-
-.form-wrapper button:focus:before,
-.form-wrapper button:active:before{
-  border-right-color: #c42f2f;
-}
-
-.form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
-  border: 0;
-  padding: 0;
-}
-
-#submit {
-  width: 502px;
-
-  padding: 0;
-  margin: -5px 0px 0px 0px;
-
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  color: #b3aca7;
-
-  outline:none;
-  cursor: pointer;
-
-  border: solid 1px #b3aca7;
-  border-top: none;
-}
-
-#submit:hover {
-  color: #ffffff;
-}
-
- /* alert styling */
-.email-input-outcome {
-  margin: auto;
-  width: 393px;
-}
-.email-input-error {
-  color: red;
-}
-.email-input-success {
-  color: green;
-}
-
-.faq, .about, .success {
-  margin-top: 50px;
+.faq, .about {
+  height: 100vh;
+  margin-top: 0px;
+  padding-top: 40px;
   text-align: center;
-  color: #757575;
 }
 .questions {
-  color: #757575;
+  height: 100vh;
   padding-top: 15px;
-  max-width: 660px;
+  width: 50%;
   margin: auto;
   text-align: justify;
-}
-.faq h1 {
-  margin-top: 15px;
 }
 .questions p {
   padding-top: 12px;
   font-size: 16px;
   line-height: 1.58;
-}
-.text-container {
-  margin-top: -20px;
-  width:100%;
-  background-color: #E1E2E1;
 }
