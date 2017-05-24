@@ -1,66 +1,66 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
 
-body {
-  height:100%;
-  width:100%;  
+/* verdino = #C8E532 testo = #253D16*/
+/* unhcr blue = #0072BC testo = bianco */
+/* sip gradient = linear-gradient(to bottom, #6300c8 0%, #36d3fe 100%) #9000ff; testo = #DECFF5 */
+/* giallo awwwward = #f2b632, testo = #677077 testo blu-scuro = #252839 grigio-chiaro = #b5b5b7 */
+/* giallo-backgorund = #FCD200, giallino = #FDEA90, arancio = #FD6C00, rose = #FF0086 */
+
+html body {
   margin: 0;
+  color: #253d16;
+  backgorund: white;
+  /* background: #c8e532; */
 }
 .partial-container {
   height: 100%;
   font-family: 'roboto mono', monospace;
-  /* background: linear-gradient(to bottom, rgb(255, 196, 0), rgb(255, 126, 171)); */
-  background: #ffc400;
+  background: inherit;
 }
 .product-description {
-  height: 100vh;
-  padding-top: 90px;
+  padding-top: 30px;
   font-family: 'roboto mono', monospace;
   text-align: center;
   line-height: 2px;
   font-size: large;
 }
-.top-bar {
-  height: 20px;
-  margin-bottom: solid 1px #eaaf12
-  margin: -10px;
-  overflow: hidden;
-  background: #c2185b;
-  text-align: center;
-}
+
 .navbar-logo {
-  position: relative;
+  background: #c8e532;
+  width: 100%;
   z-index: 0;
   font-family: 'roboto mono', monospace;
-  height: 100px;
-  /* box-shadow: 0px 1px 8px #b0003a; */
-  margin: -10px;
+  height: 85px;
+  box-shadow: 0px 1px 8px #253D16;
+  /* border-bottom: 1px solid #ffffff; */
+  margin: auto;
   overflow: hidden;
-  background: #e91e63;
   text-align: center;
 }
 
 .navbar-logo h1 {
   position: relative;
   float: left;
-  margin-left: 20px;
+  margin-left: 60px;
   text-decoration: none;
   vertical-align: middle;
 }
 .navbar-logo h1 a {
+  font-size: 30px;
   text-decoration: inherit;
-  color: #ffffff;
+  color: inherit;
 }
+
 .right-navigation {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  vertical-align: middle;
   margin-top: 15px;
-  margin-right: 50px;
+  margin-right: 100px;
   float: right;
 }
 .right-navigation li {
-  font-size: 22px;
+  font-size: 18px;
   float: left;
 }
 .right-navigation li a {
@@ -69,12 +69,13 @@ body {
   width: 60px;
   padding: 14px 16px;
   text-decoration: none;
-  color: #ffffff;
+  color: inherit;
 }
 
 .email-form {
   position: relative;
-  margin-top: 200px;
+  text-align: center;
+  margin-top: 150px;
   width: 100%;
 }
 
@@ -104,21 +105,22 @@ textarea:hover {
   color: inherit;
 }
 
-.faq, .about {
-  height: 100vh;
-  margin-top: 0px;
-  padding-top: 40px;
+.faq, .about, .success {
+  padding-top: 30px;
   text-align: center;
 }
-.questions {
-  height: 100vh;
+.text-paragraphs {
+  height: 100%;
   padding-top: 15px;
   width: 50%;
   margin: auto;
   text-align: justify;
 }
-.questions p {
+.text-paragraphs p {
   padding-top: 12px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.58;
+}
+strong {
+  font-weight: bold;
 }
