@@ -2,6 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require('mongoose');
 var path = require('path');
+var compression = require('compression');
 
 // *** Database setup ***
 var Schema = new mongoose.Schema({
@@ -16,6 +17,7 @@ var Contact = mongoose.model('Contact', Schema);
 
 // *** Express setup ***
 var app = express();
+app.use(compression());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.set('view engine', 'pug');

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,10 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
     "express": "^4.15.2",
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.2",
-    "pug": "^2.0.0-rc.1",
-    "serve-favicon": "^2.4.2"
+    "pug": "^2.0.0-rc.1"
   }
 }
