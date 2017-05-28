@@ -41,7 +41,7 @@ app.post('/add_contact', function (req, res) {
             res.render('index', {error: true})
         }
         else if (c > 0) {
-            res.render('index', {duplicated: true});
+            res.render('index', {duplicated: true, email: req.body.email});
         } else {
             var contact = new Contact( req.body );
             contact.save(function (err) {

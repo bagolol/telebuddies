@@ -1,4 +1,7 @@
 div.email-form
-  h4 Want to know when telebuddies is ready?
-  form(action='add_contact' method='post' class='mdl-textfield mdl-js-textfield')
-    input(type='email' name='email' placeholder='Enter your email...' required class='mdl-textfield__input')
+  h4 Be the first to know when the website is ready!
+  if duplicated
+    h4.duplicated-address #{email} already exists
+  form(action='add_contact' method='post')
+    input(name='email' placeholder='Email...' type='email' id='email-input' autocomplete='off' required)
+    button(class='email-submit') Sign up

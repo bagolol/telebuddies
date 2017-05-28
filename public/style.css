@@ -9,27 +9,26 @@
 html body {
   margin: 0;
   color: #253d16;
-  backgorund: white;
-  /* background: #c8e532; */
+  /* background: #F6F7EB; */
+  background: white;
 }
 .partial-container {
   height: 100%;
-  font-family: 'roboto mono', monospace;
+  font-family: 'Averia Sans Libre', cursive;
   background: inherit;
 }
 .product-description {
   padding-top: 30px;
-  font-family: 'roboto mono', monospace;
   text-align: center;
   line-height: 2px;
   font-size: large;
 }
 
 .navbar-logo {
-  background: #c8e532;
-  width: 100%;
+  background: linear-gradient(to right, rgb(238, 9, 121), rgb(255, 106, 0));  color: white;
+  width: 90%;
   z-index: 0;
-  font-family: 'roboto mono', monospace;
+  font-family: 'Averia Sans Libre', cursive;
   height: 85px;
   box-shadow: 0px 1px 8px #253D16;
   /* border-bottom: 1px solid #ffffff; */
@@ -79,25 +78,51 @@ html body {
   width: 100%;
 }
 
+/* input */
+#email-input:focus {
+  width: 210px;
+}
+#email-input {
+  width: 150px;
+  transition: ease-in-out, width .35s ease-in-out;
+  border-radius: 5%;
+  padding-left: 5px;
+  height: 30px;
+  border: 1px solid #F63640;
+  border-right: none;
+}
+.email-submit {
+  vertical-align: bottom;
+  margin-top: 10px;
+  border-radius: 4%;
+  text-transform: uppercase;
+  background: linear-gradient(to right, rgb(238, 9, 121), rgb(255, 106, 0));
+  border: none;
+  color: white;
+  padding: 4px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.duplicated-address {
+  color: red;
+}
 ::-webkit-input-placeholder {
-  color: inherit;
-  font-family: 'roboto mono', monospace;
+  font-family: 'Averia Sans Libre', cursive;
   font-size: 14px;
 }
 :-moz-placeholder { /* older Firefox*/
-  color: inherit;
-  font-family: 'roboto mono', monospace;
+  font-family: 'Averia Sans Libre', cursive;
   font-size:14px;
 }
-::-moz-placeholder { /* Firefox 19+ */ 
-  color: inherit;
-  font-family: 'roboto mono', monospace;
+::-moz-placeholder { /* Firefox 19+ */
+  font-family: 'Averia Sans Libre', cursive;
   font-size: 14px;
-} 
-:-ms-input-placeholder { 
-  color: inherit;
-  font-family: 'roboto mono', monospace;
-  font-size: 14px; 
+}
+:-ms-input-placeholder {
+  font-family: 'Averia Sans Libre', cursive;
+  font-size: 14px;
 }
 
 textarea:hover {
@@ -106,21 +131,25 @@ textarea:hover {
 }
 
 .faq, .about, .success {
-  padding-top: 30px;
+  padding-top: 25px;
   text-align: center;
+}
+.faq h4 {
+  font-size: 20px;
 }
 .text-paragraphs {
   height: 100%;
   padding-top: 15px;
-  width: 50%;
+  width: 45%;
   margin: auto;
   text-align: justify;
 }
 .text-paragraphs p {
-  padding-top: 12px;
-  font-size: 15px;
+  padding: 7px 0 15px 0;
+  font-size: 17px;
   line-height: 1.58;
 }
 strong {
+  font-size: 18px;
   font-weight: bold;
 }
