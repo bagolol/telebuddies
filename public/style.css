@@ -40,7 +40,7 @@ html body {
 .navbar-logo h1 {
   position: relative;
   float: left;
-  margin-left: 60px;
+  margin-left: 6%;
   text-decoration: none;
   vertical-align: middle;
 }
@@ -55,7 +55,7 @@ html body {
   margin: 0;
   padding: 0;
   margin-top: 15px;
-  margin-right: 100px;
+  margin-right: 6%;
   float: right;
 }
 .right-navigation li {
@@ -153,3 +153,30 @@ strong {
   font-size: 18px;
   font-weight: bold;
 }
+@media only screen and (max-width: 600px) {
+  .text-paragraphs {
+    width:90%;
+  }
+  .product-description {
+    padding-top: 15px;
+    line-height: 1.5px;
+    font-size: large;
+  }
+  .email-form {
+    margin-top: 30%;
+  }
+  .right-navigation {
+    margin-right: 2%;
+  }
+  .navbar-logo {
+    width: 100%;
+  }
+  .email-form h4 {
+    padding: 0 10px 0 10px;
+  }
+  .product-description h2 {
+    font-size: 24px;
+  }
+}
+
+
