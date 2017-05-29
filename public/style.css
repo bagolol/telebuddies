@@ -12,6 +12,7 @@ html body {
   /* background: #F6F7EB; */
   background: white;
 }
+/* PARTIAL CONTAINER */
 .partial-container {
   height: 100%;
   font-family: 'Averia Sans Libre', cursive;
@@ -23,7 +24,7 @@ html body {
   line-height: 2px;
   font-size: large;
 }
-
+/* NAVBAR */
 .navbar-logo {
   background: linear-gradient(to right, rgb(238, 9, 121), rgb(255, 106, 0));  color: white;
   width: 90%;
@@ -36,7 +37,6 @@ html body {
   overflow: hidden;
   text-align: center;
 }
-
 .navbar-logo h1 {
   position: relative;
   float: left;
@@ -49,7 +49,7 @@ html body {
   text-decoration: inherit;
   color: inherit;
 }
-
+/* RIGHT NAVIGATION */
 .right-navigation {
   list-style-type: none;
   margin: 0;
@@ -70,17 +70,15 @@ html body {
   text-decoration: none;
   color: inherit;
 }
-
+/* EMAIL FORM */
 .email-form {
   position: relative;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 6%;
   width: 100%;
 }
-
-/* input */
 #email-input:focus {
-  width: 210px;
+  width: 190px;
 }
 #email-input {
   width: 150px;
@@ -124,12 +122,11 @@ html body {
   font-family: 'Averia Sans Libre', cursive;
   font-size: 14px;
 }
-
 textarea:hover {
   background
   color: inherit;
 }
-
+/* OTHER PAGES */
 .faq, .about, .success {
   padding-top: 25px;
   text-align: center;
@@ -137,9 +134,16 @@ textarea:hover {
 .faq h4 {
   font-size: 20px;
 }
+.faq h2 {
+  font-size: 37px;
+}
+.about h2 {
+  font-size: 37px;
+}
 .text-paragraphs {
   height: 100%;
   padding-top: 15px;
+
   width: 45%;
   margin: auto;
   text-align: justify;
@@ -153,6 +157,7 @@ strong {
   font-size: 18px;
   font-weight: bold;
 }
+/* RESPONSIVE */
 @media only screen and (max-width: 600px) {
   .text-paragraphs {
     width:90%;
@@ -163,7 +168,7 @@ strong {
     font-size: large;
   }
   .email-form {
-    margin-top: 30%;
+    margin-top: 35%;
   }
   .right-navigation {
     margin-right: 2%;
@@ -178,5 +183,254 @@ strong {
     font-size: 24px;
   }
 }
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 
+  .text-paragraphs {
+    width:90%;
+  }
+  .product-description {
+    padding-top: 10px;
+  }
+  .email-form {
+    margin-top: 20%;
+  }
+  .right-navigation {
+    margin-right: 2%;
+  }
+  .navbar-logo {
+    width: 100%;
+  }
+  .email-form h4 {
+    font-size: 14px;
+    padding: 0 10px 0 10px;
+  }
+  .product-description h2 {
+    font-size: 21px;
+  }
+  .faq, .about, .success {
+        padding-top: 10px;
+  }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+  .email-form {
+    margin-top: -15px;
+  }
+  .text-paragraphs {
+    margin-top: -10px;
+    width: 95%;
+  }
+  .product-description {
+    margin-top: -10px;
+  }
+  .faq, .about, .success {
+        padding-top: 10px;
+  }
+}
+/* ----------- iPhone 6 ----------- */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+  .product-description h2 {
+    margin-top: 10px;
+    padding: 0 8px 0 8px;
+    font-size: 43px;
+  }
+
+  .faq, .about, .success {
+        padding-top: 10px;
+  }
+}
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+  .email-form {
+    margin-top: -5px;
+  }
+  .text-paragraphs {
+    margin-top: -10px;
+    width: 90%;
+  }
+  .product-description {
+    margin-top: -10px;
+  }
+  .navbar-logo {
+    width: 100%;
+  }
+  .faq, .about, .success {
+        padding-top: 10px;
+  }
+}
+/* ------------ apple watch -------------- */
+@media
+  (max-device-width: 319px)
+  and (min-device-width: 272px) {
+
+  .email-form {
+    margin-top: 10px;
+  }
+  .email-form h4 span {
+    display: none;
+  }
+  .email-form h4:after {
+    content: "Notify me when it's ready";
+  }
+  .text-paragraphs p {
+    display: none;
+  }
+  .navbar-logo h1 a {
+    font-size: 20px;
+  }
+  .right-navigation li {
+    font-size: 15px;
+  }
+  .product-description h2 {
+    margin-top: 5px;
+    font-size: 38px;
+  }
+  .right-navigation li a {
+    width: 53px;
+    padding: 21px 16px;
+  }
+}
+/* ----------- Non-Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .text-paragraphs strong {
+      font-size: 30px;
+    }
+    .product-description h2 {
+      font-size: 50px;
+    }
+    .text-paragraphs {
+      padding-top: 30px;
+      width: 60%;
+    }
+    .text-paragraphs p {
+      font-size: 30px;
+    }
+    .email-form h4 {
+        font-size: 28px;
+    }
+    .faq h4 {
+        font-size: 35px;
+    }
+    .navbar-logo h1 a {
+      font-size: 43px;
+    }
+    .navbar-logo h1 {
+      margin-left: 4%;
+    }
+    .right-navigation li {
+      font-size: 27px;
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+    .text-paragraphs strong {
+      font-size: 38px;
+    }
+    .product-description h2 {
+      font-size: 60px;
+    }
+    .text-paragraphs {
+      padding-top: 30px;
+      width: 60%;
+    }
+    .text-paragraphs p {
+      font-size: 38px;
+    }
+    .email-form h4 {
+        font-size: 33px;
+    }
+    .faq h2 {
+        font-size: 42px;
+    }
+    .about h2 {
+        font-size: 42px;
+    }
+    .navbar-logo h1 a {
+      font-size: 43px;
+    }
+    .navbar-logo h1 {
+      margin-left: 4%;
+    }
+    .right-navigation li {
+      font-size: 27px;
+    }
+}
+
+/* ----------- iPad mini ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .product-description h2 {
+      font-size: 36px;
+    }
+    .text-paragraphs p {
+      font-size: 25px;
+    }
+    .text-paragraphs {
+      margin-top: 40px;
+    }
+    .email-form {
+        margin-top: 20%;
+    }
+    .email-form h4 {
+      font-size: 22px;
+    }
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .text-paragraphs {
+      margin-top: 30px;
+      width: 60%;
+    }
+    .email-form {
+        margin-top: 20%;
+    }
+
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .email-form {
+        margin-top: 15%;
+    }
+
+}
 
