@@ -3,6 +3,7 @@ var bodyParser = require("body-parser");
 var mongoose = require('mongoose');
 var path = require('path');
 var compression = require('compression');
+var helmet = require('helmet')
 
 // *** Database setup ***
 var Schema = new mongoose.Schema({
@@ -13,15 +14,18 @@ mongoose.connect(url, function (error) {
     if (error) console.error(error);
     else console.log('mongo connected');
 });
+
 var Contact = mongoose.model('Contact', Schema);
 
 // *** Express setup ***
 var app = express();
+app.use(helmet());
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, './public')));
+
 // *** Routes ***
 app.get('/', function(req, res) {
   res.render('index');
@@ -50,7 +54,6 @@ app.post('/add_contact', function (req, res) {
         }
     });
 });
-
 
 
 // *** Initialize the app. ***
