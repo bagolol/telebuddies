@@ -157,6 +157,22 @@ strong {
   font-size: 18px;
   font-weight: bold;
 }
+/* VIDEO */
+.video-explainer {
+  width: 55%;
+}
+video::-internal-media-controls-download-button {
+    display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+
 /* RESPONSIVE */
 @media only screen and (max-width: 600px) {
   .text-paragraphs {
