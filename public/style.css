@@ -205,7 +205,7 @@ video::-webkit-media-controls-panel {
   and (-webkit-min-device-pixel-ratio: 2) {
    .video-explainer {
       width: 80%;
-      margin-top: 40px;
+      margin-top: 20px;
     }
 
   .text-paragraphs {
@@ -215,7 +215,7 @@ video::-webkit-media-controls-panel {
     padding-top: 10px;
   }
   .email-form {
-    margin-top: 30%;
+    margin-top: 20%;
   }
   .right-navigation {
     margin-right: 2%;
