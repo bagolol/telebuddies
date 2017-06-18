@@ -203,6 +203,10 @@ video::-webkit-media-controls-panel {
   and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
+   .video-explainer {
+      width: 80%;
+      margin-top: 40px;
+    }
 
   .text-paragraphs {
     width:90%;
@@ -211,7 +215,7 @@ video::-webkit-media-controls-panel {
     padding-top: 10px;
   }
   .email-form {
-    margin-top: 20%;
+    margin-top: 30%;
   }
   .right-navigation {
     margin-right: 2%;
@@ -224,7 +228,7 @@ video::-webkit-media-controls-panel {
     padding: 0 10px 0 10px;
   }
   .product-description h2 {
-    font-size: 21px;
+    font-size: 20px;
   }
   .faq, .about, .success {
         padding-top: 10px;
@@ -237,9 +241,8 @@ and (min-device-width: 320px)
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
-
-  .email-form {
-    margin-top: -15px;
+  .video-explainer {
+        width: 80%;
   }
   .text-paragraphs {
     margin-top: -10px;
@@ -259,6 +262,9 @@ and (orientation: landscape) {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
+  .video-explainer {
+        width: 80%;
+  }
   .product-description h2 {
     margin-top: 10px;
     padding: 0 8px 0 8px;
@@ -275,6 +281,9 @@ and (orientation: landscape) {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
+  .video-explainer {
+        width: 80%;
+  }
   .email-form {
     margin-top: -5px;
   }
